@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter
 import com.example.pizzaorderapp.R
 import com.example.pizzaorderapp.datas.Store
 
-class PizzaStroeAdapter (val mContext : Context,
-                         val resId : Int ,
+class PizzaStoreAdapter (val mContext : Context,
+                         val resId : Int,
                          val mList : List<Store>): ArrayAdapter<Store>(mContext,resId,mList) {
 
                              val inflater = LayoutInflater.from(mContext)
