@@ -2,9 +2,14 @@ package com.example.pizzaorderapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pizzaorderapp.adapter.MainViewPagerAdapter
 import com.example.pizzaorderapp.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
+
+    lateinit var mvpa : MainViewPagerAdapter
+
+
     lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +31,12 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
 
-//        binding.mainTapLayout.setupWithViewPager()
+        mvpa = MainViewPagerAdapter(supportFragmentManager)
+        binding.mainViewPager.adapter = mvpa
 
-        // 화면에 데이터를 표시하기 위한 코드 모음.
+        binding.mainTapLayout.setupWithViewPager(binding.mainViewPager)
+
+
 
     }
 
