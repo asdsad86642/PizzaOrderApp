@@ -14,7 +14,7 @@ import com.example.pizzaorderapp.datas.Store
 
 class PizzaStoreFragment : Fragment() {
 
-    val mPizzaStoreDataList = ArrayList<Store>()
+    private val mPizzaStoreDataList = ArrayList<Store>()
 
     lateinit var mPizzaStoreAdapter: PizzaStoreAdapter
     private var _binding: FragmentPizzaStoreListBinding? = null
