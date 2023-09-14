@@ -1,5 +1,7 @@
 package com.example.pizzaorderapp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputBinding
@@ -29,6 +31,12 @@ class ViewStoreDetailActivity : BaseActivity() {
 
 
     override fun setupEvents() {
+
+        binding.callPhoneBtn.setOnClickListener {
+            val myUri = Uri.parse("tel:${mStoreData.phoneNumber}")
+            val myIntent = Intent(Intent.ACTION_CALL,myUri)
+            startActivity(myIntent)
+        }
 
     }
 
